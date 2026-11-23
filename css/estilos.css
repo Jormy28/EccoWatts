@@ -655,3 +655,102 @@ section[id] {
     scroll-margin-top: 90px;
   }
 }
+/* =========================================================
+   INTERACCIÓN POR COMANDOS DE VOZ (ECCOWATTS)
+   ========================================================= */
+.panel-voz {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 200;
+  max-width: min(300px, calc(100vw - 2rem));
+  padding: .7rem .8rem;
+  background: #fffaf3;
+  border: 1px solid #c8ab8d;
+  border-radius: .8rem;
+  box-shadow: 0 10px 24px rgba(64, 51, 44, 0.2);
+  color: #3d302b;
+  font-size: .9rem;
+}
+
+.controles-voz {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.btn-voz {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .5rem .8rem;
+  border: 1px solid #a3981e;
+  border-radius: .5rem;
+  background: #ffffff;
+  color: #3d302b;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+
+.btn-voz:hover {
+  background: #f4e9d9;
+}
+
+.btn-voz[aria-pressed="true"] {
+  background: #94432f;
+  border-color: #94432f;
+  color: #ffffff;
+}
+
+.btn-ayuda-voz {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #c8ab8d;
+  border-radius: 50%;
+  background: #f4e9d9;
+  color: #3d302b;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-ayuda-voz:hover {
+  background: #e7da4e;
+}
+
+.estado-voz {
+  margin: .45rem 0 0;
+  font-size: .82rem;
+  line-height: 1.35;
+  color: #5a473f;
+}
+
+.lista-comandos-voz {
+  margin-top: .5rem;
+  padding-top: .5rem;
+  border-top: 1px solid #dfcbb7;
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .panel-voz {
+    right: .65rem;
+    bottom: .65rem;
+    padding: .6rem;
+  }
+
+  .btn-voz {
+    padding: .45rem .65rem;
+    font-size: .85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-voz {
+    transition: none;
+  }
+}
