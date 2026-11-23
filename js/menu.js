@@ -99,3 +99,11 @@ function iniciarAsistenteEccoWatts() {
 }
 
 document.addEventListener("DOMContentLoaded", iniciarAsistenteEccoWatts);
+// Puente para comandos de voz
+window.EccoWattsUI = {
+  cambiarMenu,
+  alternarMenu() {
+    const estaAbierto = botonMenu.getAttribute('aria-expanded') === 'true';
+    cambiarMenu(!estaAbierto);
+  }
+};
