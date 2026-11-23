@@ -655,12 +655,13 @@ section[id] {
     scroll-margin-top: 90px;
   }
 }
+
 /* =========================================================
    INTERACCIÓN POR COMANDOS DE VOZ (ECCOWATTS)
    ========================================================= */
 .panel-voz {
   position: fixed;
-  right: 1rem;
+  left: 1rem;
   bottom: 1rem;
   z-index: 200;
   max-width: min(300px, calc(100vw - 2rem));
@@ -738,7 +739,7 @@ section[id] {
 
 @media (max-width: 600px) {
   .panel-voz {
-    right: .65rem;
+    left: .65rem;
     bottom: .65rem;
     padding: .6rem;
   }
