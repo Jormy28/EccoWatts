@@ -80,3 +80,22 @@ pantallaMovil.addEventListener('change', ajustarPantalla);
 
 // PASO 8. Estado inicial: cerrado en celular y visible en escritorio.
 ajustarPantalla();
+
+
+// chat bot
+function iniciarAsistenteEccoWatts() {
+  const scriptMotor = document.createElement("script");
+  scriptMotor.src = "https://cdn.botpress.cloud/webchat/v5.0/inject.js";
+  scriptMotor.async = true;
+
+  scriptMotor.onload = () => {
+    const scriptBot = document.createElement("script");
+    scriptBot.src = "https://files.bpcontent.cloud/2026/11/23/14/20261123145417-ENK6CHBI.js";
+    scriptBot.defer = true;
+    document.body.appendChild(scriptBot);
+  };
+
+  document.body.appendChild(scriptMotor);
+}
+
+document.addEventListener("DOMContentLoaded", iniciarAsistenteEccoWatts);
