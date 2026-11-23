@@ -80,3 +80,11 @@ pantallaMovil.addEventListener('change', ajustarPantalla);
 
 // PASO 8. Estado inicial: cerrado en celular y visible en escritorio.
 ajustarPantalla();
+// Puente para comandos de voz
+window.EccoWattsUI = {
+  cambiarMenu,
+  alternarMenu() {
+    const estaAbierto = botonMenu.getAttribute('aria-expanded') === 'true';
+    cambiarMenu(!estaAbierto);
+  }
+};
